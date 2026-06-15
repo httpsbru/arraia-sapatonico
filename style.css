@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'FonteJunina';
-    src: url('/assets/Unbounded-VariableFont_wght.ttf') format(truetype);
+    font-family: 'Unbounded';   
+    src: url('assets/Unbounded-VariableFont_wght.ttf') format(truetype);
 }
 
 body{
     margin:0;
-    font-family: 'FonteJunina';    
+    font-family:'Unbounded';    
     background:
         radial-gradient(circle at 20% 20%, white 1px, transparent 2px),
         radial-gradient(circle at 80% 30%, white 1px, transparent 2px),

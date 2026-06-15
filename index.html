@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arraiá das Sapatão 🌽</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Luckiest+Guy&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+    <h1> Arraiá das Sapatonas</h1>
+    <p>Escolha o que você vai levar!</p>
+</header>
+
+<div class="container">
+
+    <div class="nome-box">
+        <input type="text" id="nome" placeholder="Nome da sapatão">
+    </div>
+
+    <div id="contador"></div>
+
+    <div class="fogueira">
+    🔥
+    </div>
+
+    <h2>🍰 Comidas</h2>
+
+    <div id="comidas" class="grid"></div>
+
+    <h2>🥤 Bebidas</h2>
+
+    <div id="bebidas" class="grid"></div>
+
+    <h2>✨ Sugestão</h2>
+
+    <div class="sugestao">
+        <input id="novoItem" placeholder="Ex: Canjica">
+        <select id="tipo">
+            <option value="comida">Comida</option>
+            <option value="bebida">Bebida</option>
+        </select>
+
+        <button onclick="adicionarItem()">
+            Adicionar
+        </button>
+    </div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

@@ -41,27 +41,36 @@ function renderItem(id,item,tipo){
     ? "card ocupado"
     : "card";
 
+    const nomeAtual =
+        document.getElementById("nome").value;
+
     card.innerHTML=`
         <h3>${item.nome}</h3>
 
         ${
            item.responsavel
             ? `
-            <p>❤️ Reservado por ${item.responsavel}</p>
+                <p>❤️ Reservado por ${item.responsavel}</p>
 
-            <button onclick="desistir('${tipo}','${id}')">
-                ❌ Desistir
-            </button>
+                ${
+                    item.responsavel === nomeAtual
+                     ? `
+                        <button onclick="desistir('${tipo}','${id}')">
+                            ❌ Desistir
+                        </button>
+                     `
+                    : ""
+                }
             `
-            : `<button onclick="levar('${tipo}','${id}')">
-                🔥 Eu levo
-            </button>`
-           
-        
+            : `
+                <button onclick="levar('${tipo}','${id}')">
+                    🔥 Eu levo
+                </button>
+            `
         }
     `;
 
-    if(tipo==="comida"){
+    if(tipo === "comida"){
         comidasDiv.appendChild(card);
     }else{
         bebidasDiv.appendChild(card);
